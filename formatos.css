@@ -13,7 +13,8 @@
     padding: 0;
 }
 body {
-    height: 100vh;
+    position: relative;
+    min-height: 100vh;
     background-color: var(--cor-background);
     box-sizing: border-box;
     color: var(--cor-texto-principal);
@@ -22,6 +23,7 @@ body {
 /* ESTILOS DO MENU E RODAPÉ */
 
 .topo {
+    background-color: var(--cor-background);
     padding: 2% 0% 0% 0%;
 }
 .topo__menu {
@@ -41,14 +43,18 @@ body {
 }
 .rodape {
     width: 100%;
-    height: 1.5rem;
+    height: 1rem;
     background-color: var(--cor-texto-principal);
     color: var(--cor-background);
     text-align: center;
     font-size: 1rem;
     font-family: var(--fonte-primaria);
-    position: static;
+    position: absolute;
     bottom: 0;
+    padding-bottom: 1.5rem;
+}
+#content-wrap {
+    padding-bottom: 2.5rem;
 }
 
 /* ESTILOS DA HOME */
@@ -65,7 +71,7 @@ body {
     width: 50px;
     height: 50px;
 }
-.apresentacao__titulo {
+.titulo__apresentacao {
     padding: 5%;
     font-size: 2.25rem;
     font-family: var(--fonte-primaria);
@@ -140,11 +146,13 @@ body {
 
 .formulario {
     background-color: var(--cor-background);
-    padding: 5% 25% 20% 25%;
+    padding: 0% 25% 0% 25%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 50px;
+}
+.titulo__cadastro {
+    font-family: var(--fonte-primaria);
+    color: var(--cor-texto-principal);
 }
 .cor__botao {
     background-color: var(--cor-texto-principal);
@@ -154,4 +162,6 @@ body {
 .cor__botao:hover {
     background-color: var(--cor-background);
     color: var(--cor-texto-principal);
+    border: 2px solid var(--cor-texto-principal);
+    box-shadow: 3px 3px #956161;
 }
